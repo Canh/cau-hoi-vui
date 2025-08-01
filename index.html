@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trả lời câu đố vui</title>
+  <script>
+    function kiemTraCauTraLoi() {
+      var cau1 = document.getElementById("cau1").value.trim().toLowerCase();
+      var cau2 = document.getElementById("cau2").value.trim().toLowerCase();
+      var cau3 = document.getElementById("cau3").value.trim().toLowerCase();
+
+      var dung1 = cau1 === "tóc";
+      var dung2 = cau2 === "mắt";
+      var dung3 = cau3 === "quần đảo";
+
+      if (dung1 && dung2 && dung3) {
+        // Chuyển tới trang nếu đúng cả 3
+        window.location.href = "https://tindungtaysaigon.com/";
+      } else {
+        alert("Sai rồi! Hãy kiểm tra lại đáp án nhé 😄");
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .cau-hoi {
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h2>🧠 Trả lời đúng cả 3 câu đố để mở khóa!</h2>
+
+  <div class="cau-hoi">
+    <strong>1. Con gì càng cắt thì lại càng dài?</strong><br>
+    <input type="text" id="cau1" placeholder="Nhập câu trả lời">
+  </div>
+
+  <div class="cau-hoi">
+    <strong>2. Trên lông dưới lông, ở giữa có hột gạo là gì?</strong><br>
+    <input type="text" id="cau2" placeholder="Nhập câu trả lời">
+  </div>
+
+  <div class="cau-hoi">
+    <strong>3. Quần gì không ai mặc được?</strong><br>
+    <input type="text" id="cau3" placeholder="Nhập câu trả lời">
+  </div>
+
+  <button onclick="kiemTraCauTraLoi()">Kiểm tra</button>
+</body>
+</html>
